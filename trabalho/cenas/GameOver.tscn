@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dpt58icaw3wbs"]
+
+[ext_resource type="Texture2D" uid="uid://b53dlmpkiqfim" path="res://imagens/game Over.png" id="1_deopk"]
+[ext_resource type="Script" uid="uid://1seuqsnwykrk" path="res://Scripts/game_over.gd" id="2_0h0fu"]
+[ext_resource type="Texture2D" uid="uid://yexuqa2cixgn" path="res://imagens/Sair_apagado-removebg-preview.png" id="2_cqt6f"]
+[ext_resource type="Texture2D" uid="uid://sueva0pqbuqt" path="res://imagens/sair-removebg-preview.png" id="3_0h0fu"]
+[ext_resource type="AudioStream" uid="uid://bpwwpvw8rkx05" path="res://musicas/2019-08-25_-_8bit-Smooth_Presentation_-_David_Fesliyan.mp3" id="5_xn06u"]
+
+[node name="GameOver" type="TextureRect" unique_id=396629937]
+offset_right = 1152.0
+offset_bottom = 640.0
+texture = ExtResource("1_deopk")
+expand_mode = 1
+script = ExtResource("2_0h0fu")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=821608604]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 496.0
+offset_right = 640.0
+offset_bottom = 624.0
+texture_normal = ExtResource("2_cqt6f")
+texture_pressed = ExtResource("3_0h0fu")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1874891918]
+stream = ExtResource("5_xn06u")
+volume_db = -24.074
+autoplay = true
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

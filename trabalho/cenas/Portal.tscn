@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://djc564bifjp5w"]
+
+[ext_resource type="Texture2D" uid="uid://dlnok2e6hnvc5" path="res://portal/Dimensional_Portal.png" id="1_2rrjb"]
+[ext_resource type="Script" uid="uid://bewy7k2dibhf4" path="res://Scripts/portal.gd" id="1_5l3pm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5l3pm"]
+radius = 32.0
+height = 128.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ounj"]
+atlas = ExtResource("1_2rrjb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52trp"]
+atlas = ExtResource("1_2rrjb")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdy2w"]
+atlas = ExtResource("1_2rrjb")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5rea"]
+atlas = ExtResource("1_2rrjb")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dkdh"]
+atlas = ExtResource("1_2rrjb")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_djmap"]
+atlas = ExtResource("1_2rrjb")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x3wcj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ounj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52trp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xdy2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5rea")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5dkdh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_djmap")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="portal" type="Area2D" unique_id=725347012 groups=["portal"]]
+position = Vector2(0, 16)
+script = ExtResource("1_5l3pm")
+
+[node name="colision" type="CollisionShape2D" parent="." unique_id=126165639]
+shape = SubResource("CapsuleShape2D_5l3pm")
+
+[node name="anim" type="AnimatedSprite2D" parent="." unique_id=808845920]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_x3wcj")
+autoplay = "default"
+frame = 3
+frame_progress = 0.5022604

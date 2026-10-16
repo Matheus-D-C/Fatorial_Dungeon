@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://i5y825fhaovl"]
+
+[ext_resource type="Script" uid="uid://cc4w1l3ogdgdy" path="res://Scripts/inserir_fase.gd" id="1_uierc"]
+[ext_resource type="Texture2D" uid="uid://cws0lhukv4qsj" path="res://imagens/fundo.png" id="2_wwtty"]
+
+[node name="InserirFase" type="Node2D" unique_id=1618282359]
+script = ExtResource("1_uierc")
+
+[node name="Fundo" type="Sprite2D" parent="." unique_id=719969516]
+position = Vector2(576, 319.99997)
+scale = Vector2(2.304, 2.2775803)
+texture = ExtResource("2_wwtty")
+
+[node name="Label" type="Label" parent="." unique_id=2099584357]
+offset_left = 80.0
+offset_top = 144.0
+offset_right = 315.0
+offset_bottom = 213.0
+theme_override_font_sizes/font_size = 50
+text = "Pergunta:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LinePergunta" type="LineEdit" parent="Label" unique_id=1333785313]
+layout_mode = 0
+offset_left = 240.0
+offset_right = 965.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 25
+
+[node name="Label6" type="Label" parent="." unique_id=1167964296]
+offset_left = 80.0
+offset_top = 272.0
+offset_right = 314.0
+offset_bottom = 341.0
+theme_override_font_sizes/font_size = 50
+text = "Resposta:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineResposta" type="LineEdit" parent="Label6" unique_id=345440146]
+layout_mode = 0
+offset_left = 240.0
+offset_right = 965.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 25
+
+[node name="BtnFase1" type="Button" parent="." unique_id=31355819]
+offset_left = 80.0
+offset_top = 368.0
+offset_right = 239.0
+offset_bottom = 431.0
+theme_override_font_sizes/font_size = 40
+text = "Tutorial"
+
+[node name="BtnFase2" type="Button" parent="." unique_id=634051496]
+offset_left = 256.0
+offset_top = 368.0
+offset_right = 384.0
+offset_bottom = 431.0
+theme_override_font_sizes/font_size = 40
+text = "Fase 1"
+
+[node name="BtnFase3" type="Button" parent="." unique_id=1808381262]
+offset_left = 400.0
+offset_top = 368.0
+offset_right = 528.0
+offset_bottom = 431.0
+theme_override_font_sizes/font_size = 40
+text = "Fase 2"
+
+[node name="BtnFase4" type="Button" parent="." unique_id=843693901]
+offset_left = 544.0
+offset_top = 368.0
+offset_right = 672.0
+offset_bottom = 431.0
+theme_override_font_sizes/font_size = 40
+text = "Fase 3"
+
+[node name="BtnSalvar" type="Button" parent="." unique_id=1771964987]
+offset_left = 688.0
+offset_top = 368.0
+offset_right = 814.0
+offset_bottom = 431.0
+theme_override_font_sizes/font_size = 40
+text = "Salvar"
+
+[node name="BtnVoltar" type="Button" parent="." unique_id=1696708492]
+offset_left = 512.0
+offset_top = 448.0
+offset_right = 594.0
+offset_bottom = 511.0
+theme_override_font_sizes/font_size = 40
+text = "Sair"
+
+[connection signal="pressed" from="BtnSalvar" to="." method="_on_btn_salvar_pressed"]
+[connection signal="pressed" from="BtnVoltar" to="." method="_on_btn_voltar_pressed"]

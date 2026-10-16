@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://sj4n8t4vev80"]
+
+[ext_resource type="Script" uid="uid://ccrlm02jo37o1" path="res://Scripts/tela_final.gd" id="1_fytqd"]
+[ext_resource type="Texture2D" uid="uid://sueva0pqbuqt" path="res://imagens/sair-removebg-preview.png" id="2_3qiq5"]
+[ext_resource type="Texture2D" uid="uid://b1eqdimjx4c7s" path="res://imagens/final.png" id="2_6pqja"]
+[ext_resource type="Texture2D" uid="uid://yexuqa2cixgn" path="res://imagens/Sair_apagado-removebg-preview.png" id="3_dwry1"]
+[ext_resource type="AudioStream" uid="uid://bpwwpvw8rkx05" path="res://musicas/2019-08-25_-_8bit-Smooth_Presentation_-_David_Fesliyan.mp3" id="4_bg8jj"]
+
+[node name="MainMenu" type="Control" unique_id=1914685238]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_fytqd")
+
+[node name="Background" type="TextureRect" parent="." unique_id=308544728]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 640.0
+texture = ExtResource("2_6pqja")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="BtnSair" type="TextureButton" parent="." unique_id=289947784]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 0
+offset_left = 528.0
+offset_top = 528.0
+offset_right = 624.0
+offset_bottom = 640.0
+texture_normal = ExtResource("3_dwry1")
+texture_pressed = ExtResource("2_3qiq5")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=558053117]
+stream = ExtResource("4_bg8jj")
+volume_db = -24.074
+autoplay = true
